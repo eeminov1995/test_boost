@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <ul class="mainmenu">
+        <li><a href="{{ url_for('main.index') }}">Главная</a></li>
+        <li><a href="{{ url_for('main.get_data') }}">JSON</a></li>
+        <li><a href="{{ url_for('main.purge_data') }}">Очистка данных</a></li>
+        <li>Вход</li>
+        <li><a href="{{ url_for('main.register') }}">Регистрация</a></li>
+    </ul>
+    <div class="content-wrapper">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

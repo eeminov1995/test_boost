@@ -1,0 +1,204 @@
+html, body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f8f9fa;
+    color: #343a40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+ul.mainmenu {
+    list-style: none;
+    background: #343a40;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font-size: 18px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+ul.mainmenu li {
+    margin: 0 10px; /* Уменьшили отступы между кнопками */
+}
+
+ul.mainmenu li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 15px 10px; /* Уменьшили отступы для кнопок */
+}
+
+ul.mainmenu li a:hover {
+    color: #007bff;
+    background-color: #495057; /* Добавили фон при наведении */
+}
+
+.content-wrapper {
+    margin-top: 60px; /* Добавили отступ сверху для учета фиксированной навигации */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.content {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Ограничили ширину контента */
+    text-align: left; /* Выровняли текст по левому краю */
+    width: 100%;
+}
+
+.form-contact {
+    max-width: 400px; /* Уменьшили максимальную ширину формы */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.form-contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-contact input[type=text],
+.form-contact input[type=email],
+.form-contact input[type=password],
+.form-contact input[type=number],
+.form-contact input[type=submit],
+.form-contact textarea {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+.form-contact input[type=submit] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-size: 18px;
+}
+
+.form-contact input[type=submit]:hover {
+    background-color: #0056b3;
+}
+
+.form-contact .invalid {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.form-contact .invalid-feedback {
+    color: #721c24;
+}
+
+.flash {
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.flash.success {
+    border: 1px solid #28a745;
+    background: #d4edda;
+    color: #155724;
+}
+
+.flash.error {
+    border: 1px solid #dc3545;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    ul.mainmenu {
+        flex-direction: row;
+        height: auto;
+    }
+
+    ul.mainmenu li {
+        margin: 0 5px;
+    }
+
+    div.content {
+        padding: 15px;
+    }
+
+    .form-contact input[type=text],
+    .form-contact input[type=email],
+    .form-contact input[type=password],
+    .form-contact input[type=number],
+    .form-contact input[type=submit],
+    .form-contact textarea {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    ul.mainmenu {
+        padding: 10px;
+    }
+
+    ul.mainmenu li {
+        margin: 0 5px;
+    }
+
+    div.content {
+        padding: 10px;
+    }
+
+    .form-contact input[type=text],
+    .form-contact input[type=email],
+    .form-contact input[type=password],
+    .form-contact input[type=number],
+    .form-contact input[type=submit],
+    .form-contact textarea {
+        font-size: 12px;
+    }
+}

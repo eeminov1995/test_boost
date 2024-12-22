@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="form-contact">
+    <h1>Регистрация</h1>
+    <form method="POST">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="old">Возраст:</label>
+        <input type="number" id="old" name="old" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="psw">Пароль:</label>
+        <input type="password" id="psw" name="psw" required>
+
+
+        <label for="city">Город:</label>
+        <input type="text" id="city" name="city" required>
+
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+</div>
+{% endblock %}
