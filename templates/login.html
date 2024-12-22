@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="form-contact">
+    <h1>Вход</h1>
+    <form method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="psw">Password:</label>
+        <input type="password" id="psw" name="psw" required>
+
+        <input type="submit" value="Войти">
+    </form>
+</div>
+{% endblock %}

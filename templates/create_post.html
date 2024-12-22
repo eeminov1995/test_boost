@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="form-contact">
+    <h1>Создать пост</h1>
+    <form method="POST">
+        <label for="title">Заголовок:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="content">Содержание:</label>
+        <textarea id="content" name="content" required></textarea>
+
+        <input type="submit" value="Создать пост">
+    </form>
+</div>
+{% endblock %}

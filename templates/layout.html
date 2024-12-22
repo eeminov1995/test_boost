@@ -10,12 +10,24 @@
     <ul class="mainmenu">
         <li><a href="{{ url_for('main.index') }}">Главная</a></li>
         <li><a href="{{ url_for('main.get_data') }}">JSON</a></li>
-        <li><a href="{{ url_for('main.purge_data') }}">Очистка данных</a></li>
-        <li>Вход</li>
-        <li><a href="{{ url_for('main.register') }}">Регистрация</a></li>
+        {% if 'user_id' in session %}
+            <li><a href="{{ url_for('main.logout') }}">Выход</a></li>
+            <li><a href="{{ url_for('main.create_post') }}">Создать пост</a></li>
+        {% else %}
+            <li><a href="{{ url_for('main.login') }}">Вход</a></li>
+            <li><a href="{{ url_for('main.registration') }}">Регистрация</a></li>
+        {% endif %}
     </ul>
     <div class="content-wrapper">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </div>
 </body>
 </html>
+
